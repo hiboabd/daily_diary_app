@@ -65,6 +65,8 @@ I want to be able add a Comment to a Diary Entry
 As a user
 So that I can see my past reflections
 I want to see associated Comments when viewing a Diary Entry
+
+
 Could Have
 
 As a user
