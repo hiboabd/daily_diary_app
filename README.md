@@ -75,3 +75,13 @@ I want to be able to add Tags to an Entry
 As a user
 So that I can see different types of entry
 I want to be able to filter Diary Entries by Tag
+
+
+### How to create the database
+
+Anyone needing to setup the database from scratch will need to do the following things:
+
+* Connect to psql
+* Create the database using the psql command CREATE DATABASE diary_manager;
+* Connect to the database using the pqsl command \c diary_manager;
+* Run the query we have saved in the file ./db/migrations/01_add_entries_table.sql
