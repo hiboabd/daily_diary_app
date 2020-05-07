@@ -1,7 +1,7 @@
 require 'sinatra/base'
 
 
-class Diary < Sinatra::Base
+class DiaryManager < Sinatra::Base
   get '/' do
     erb(:index)
   end
@@ -13,4 +13,12 @@ class Diary < Sinatra::Base
   get '/confirm' do
     'You have submitted your entry.'
   end
+
+  get '/entries' do
+    @entries = Diary.all
+
+    erb(:all_entries)
+  end
+
+  run! if app_file == $0
 end
