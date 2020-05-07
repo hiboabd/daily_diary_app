@@ -14,7 +14,7 @@ class DiaryManager < Sinatra::Base
 
   post '/entries' do
     p "Form data submitted to the /entries route!"
-    Diary.add(entry: params[:entry])
+    Diary.add(entry: params[:entry], title: params[:title])
     redirect('/entries')
   end
 

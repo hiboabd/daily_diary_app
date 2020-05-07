@@ -2,7 +2,7 @@ require 'diary'
 
 describe Diary do
   describe '.all' do
-    it 'returns all entries' do
+    it 'returns all entry titles' do
       connection = PG.connect(dbname: 'diary_manager_test')
 
       Diary.add(entry: 'This is my first entry', title: 'Entry #1')
@@ -11,9 +11,9 @@ describe Diary do
 
       diary_entries = Diary.all
 
-      expect(diary_entries).to include("This is my first entry")
-      expect(diary_entries).to include("This is my second entry")
-      expect(diary_entries).to include("This is my third entry")
+      expect(diary_entries).to include("Entry #1")
+      expect(diary_entries).to include("Entry #2")
+      expect(diary_entries).to include("Entry #3")
     end
   end
 
