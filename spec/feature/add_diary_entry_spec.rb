@@ -6,6 +6,6 @@ feature 'Adding diary entry' do
     fill_in('entry', with: 'This is my first entry.')
     click_button('Submit')
 
-    expect(page).to have_content 'You have submitted your entry.'
+    expect(page).to have_content 'This is my first entry.'
   end
 end

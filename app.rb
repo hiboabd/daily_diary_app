@@ -12,14 +12,11 @@ class DiaryManager < Sinatra::Base
     erb(:index)
   end
 
-  post '/redirect' do
-    redirect('/entries/confirm')
+  post '/entries' do
+    p "Form data submitted to the /entries route!"
+    Diary.create(entry: params[:entry])
+    redirect('/entries')
   end
-
-  get '/entries/confirm' do
-    'You have submitted your entry.'
-  end
-
 
   run! if app_file == $0
 end
